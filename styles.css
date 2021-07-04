@@ -9,3 +9,27 @@ html, body{
     overflow-x: hidden;
     background-color: aquamarine;
 }
+
+.hero {
+    height: 100vh;
+    padding: 2.5rem;
+    background-image: url(images/desktop/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero header a {
+    text-decoration: none;
+}
+
+.hero header a img {
+    width: 8rem;
+}
+
