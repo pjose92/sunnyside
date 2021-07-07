@@ -7,7 +7,6 @@
 
 html, body{
     overflow-x: hidden;
-    background-color: aquamarine;
 }
 
 .hero {
@@ -81,3 +80,130 @@ html, body{
     font-weight: 900;
     margin: 4rem;
 }
+
+.mobile-nav {
+    display: none;
+}
+
+.features{
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.features article {
+    flex-basis: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.features article .left-col{
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features article .left-col .left-col-text {
+    max-width: 70%;
+}
+
+.features article .left-col .left-col-text h2 {
+    font-size: 2.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    color: hsl(212, 27%, 19%);
+    font-weight: 900;
+}
+
+.features article .left-col .left-col-text p {
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    color: hsl(212, 2%, 19%);
+}
+
+.features article .left-col .left-col-text a {
+    text-decoration: none;
+    color: hsl(212, 27%, 19%);
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: .5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.features article .left-col .left-col-text a::before{
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: hsla(51, 100%, 49%, 0.404);
+    z-index: -1;
+    border-radius: .5rem;
+    transition: .35s;
+}
+
+.features article .left-col .left-col-text a:hover::before{
+    background: hsl(51, 100%, 49%);
+}
+
+.features article .right-col{
+    flex-basis: 50%;
+    overflow: hidden;
+    height: 100%;
+}
+
+.features article:nth-child(2) .left-col .left-col-text a:hover::before{
+    background: hsl(7, 99%, 70%);
+}
+
+.features article:nth-child(3) .left-col{
+    background-image: url(images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size: center;
+    position: relative;
+}
+
+.features article:nth-child(3) .left-col .left-col-text{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 45%;
+}
+
+.features article:nth-child(3) .left-col .left-col-text h2{
+    font-size: 2rem;
+    color: hsl(167, 40%, 24%);
+}
+
+.features article:nth-child(3) .left-col .left-col-text p{
+    font-size: .8rem;
+    color: hsl(167, 40%, 24%);
+    font-family: 'Barlow', sans-serif;
+}
+
+.features article:nth-child(3) .left-col:nth-child(2){
+    background-image: url(images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.features article:nth-child(3) .left-col .left-col-text h3{
+    font-size: 1.5rem;
+    color: hsl(198, 62%, 26%);
+    margin-bottom: 1rem;
+}
+
+.features article:nth-child(3) .left-col:nth-child(2) .left-col-text p{
+    font-size: .8rem;
+    color: hsl(198, 62%, 26%);
+}
+
