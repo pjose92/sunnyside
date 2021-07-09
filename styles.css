@@ -9,7 +9,7 @@ html, body{
     overflow-x: hidden;
 }
 
-.hero {
+.hero{
     height: 100vh;
     padding: 2.5rem;
     background-image: url(images/desktop/image-header.jpg);
@@ -18,26 +18,30 @@ html, body{
     position: relative;
 }
 
-.hero header {
+.hero header{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.hero header a {
+.hero header .mobile-menu{
+    display: none;
+}
+
+.hero header a{
     text-decoration: none;
 }
 
-.hero header a img {
+.hero header a img{
     width: 8rem;
 }
 
-.hero header nav ul {
+.hero header nav ul{
     display: flex;
     align-items: center;
 }
 
-.hero header nav li {
+.hero header nav ul li{
     list-style: none;
     margin: 0 1.2rem;
 }
@@ -54,7 +58,7 @@ html, body{
 
 .hero header nav ul li:nth-child(4) a{
     padding: .7rem 1rem;
-    color: hsl(212, 27%, 19%);
+    color:hsl(212, 27%, 19%);
     background: hsl(0, 0%, 100%);
     border-radius: 2rem;
     text-transform: uppercase;
@@ -64,7 +68,7 @@ html, body{
 }
 
 .hero header nav ul li:nth-child(4) a:hover{
-    background: hsl(0, 0%, 100%, 0.37);
+    background: hsla(0, 0%, 100%, 0.37);
     color: hsl(0, 0%, 100%);
 }
 
@@ -81,9 +85,11 @@ html, body{
     margin: 4rem;
 }
 
-.mobile-nav {
+.mobile-nav{
     display: none;
 }
+
+/* Features starts here */
 
 .features{
     display: flex;
@@ -91,7 +97,7 @@ html, body{
     flex-wrap: wrap;
 }
 
-.features article {
+.features article{
     flex-basis: 100%;
     height: 85vh;
     display: flex;
@@ -108,11 +114,11 @@ html, body{
     justify-content: center;
 }
 
-.features article .left-col .left-col-text {
+.features article .left-col .left-col-text{
     max-width: 70%;
 }
 
-.features article .left-col .left-col-text h2 {
+.features article .left-col .left-col-text h2{
     font-size: 2.9rem;
     margin-bottom: 1.5rem;
     line-height: 1;
@@ -120,13 +126,13 @@ html, body{
     font-weight: 900;
 }
 
-.features article .left-col .left-col-text p {
+.features article .left-col .left-col-text p{
     line-height: 1.4;
     margin-bottom: 2rem;
-    color: hsl(212, 2%, 19%);
+    color: hsl(212, 27%, 19%);
 }
 
-.features article .left-col .left-col-text a {
+.features article .left-col .left-col-text a{
     text-decoration: none;
     color: hsl(212, 27%, 19%);
     text-transform: uppercase;
@@ -159,6 +165,29 @@ html, body{
     height: 100%;
 }
 
+.features article .right-col picture{
+    width: 100%;
+    height: 100%;
+}
+
+.features article .right-col picture img{
+    width: 100%;
+    height: 100%;
+}
+
+.features article:nth-child(2) .left-col .left-col-text a::before{
+    content: "";
+    position: absolute;
+    bottom: .3rem;
+    left: 0;
+    width: 100%;
+    height: .7rem;
+    background: hsla(7, 99%, 70%, 0.493);
+    z-index: -1;
+    border-radius: .5rem;
+    transition: .35s;
+}
+
 .features article:nth-child(2) .left-col .left-col-text a:hover::before{
     background: hsl(7, 99%, 70%);
 }
@@ -187,7 +216,6 @@ html, body{
 .features article:nth-child(3) .left-col .left-col-text p{
     font-size: .8rem;
     color: hsl(167, 40%, 24%);
-    font-family: 'Barlow', sans-serif;
 }
 
 .features article:nth-child(3) .left-col:nth-child(2){
@@ -219,7 +247,6 @@ html, body{
     color: hsl(210, 4%, 67%);
     margin-bottom: 3rem;
     letter-spacing: .3rem;
-    font-family: 'Fraunces', serif;
 }
 
 .testimonials .testimonial-row{
@@ -243,22 +270,18 @@ html, body{
     color: hsl(198, 62%, 26%);
     margin-bottom: 2.5rem;
     line-height: 1.6;
-    font-family: 'Barlow', sans-serif;
 }
 
 .testimonials .testimonial-row .testimonial-col .client-name h4{
     font-weight: 900;
     font-size: 1.1rem;
     margin-bottom: .5rem;
-    font-family: 'Fraunces', serif;
 }
 
 .testimonials .testimonial-row .testimonial-col .client-name p{
     font-size: .8rem;
     margin-bottom: 0;
-    font-family: 'Barlow', sans-serif;
 }
-
 
 .gallery{
     display: flex;
@@ -342,7 +365,6 @@ footer > ul > li > a:hover img{
 footer .attribution { 
     font-size: .9rem; 
     text-align: center; 
-    font-family: 'Barlow', sans-serif;
 }
 
 footer .attribution a { 
@@ -358,7 +380,7 @@ footer .attribution a:hover{
     color: hsl(0, 0%, 100%);
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px){
     .hero {
         padding: 1.5rem 1.1rem;
         background-image: url(images/mobile/image-header.jpg);
@@ -375,7 +397,7 @@ footer .attribution a:hover{
     }
 
     .hero header .active{
-        opacity: 1;
+        opacity: .1;
     }
 
     .hero header a img {
@@ -383,7 +405,7 @@ footer .attribution a:hover{
     }
 
     .hero .header-text h1 {
-        font-size: 2;
+        font-size: 2rem;
         margin: 4rem 0 4rem;
     }
 
@@ -400,11 +422,11 @@ footer .attribution a:hover{
     }
 
     .features article .right-col picture img{
-        width:100%;
+        width: 100%;
         height: 100%;
     }
 
-    .features article .left-col{
+    .features article .left-col {
         flex-basis: 100%;
         height: 60vh;
         order: 2;
@@ -421,7 +443,7 @@ footer .attribution a:hover{
         margin-bottom: 1rem;
     }
 
-    .features article .left-col.left-col-text a {
+    .features article .left-col .left-col-text a {
         position: relative;
         font-size: .8rem;
         z-index: 2;
@@ -451,7 +473,6 @@ footer .attribution a:hover{
         font-size: 1.2rem;
         color: hsl(198, 62%, 26%);
         margin-bottom: .6rem;
-        font-family: 'Fraunces', serif;
     }
 
     .testimonials {
@@ -518,5 +539,135 @@ footer .attribution a:hover{
         font-size: .8rem;
     }
 
+    .mobile-nav{
+        display: block;
+        position: fixed;
+        left: 50%;
+        top: 5rem;
+        transform: translateX(-50%);
+        background: hsl(46, 55%, 94%);
+        text-align: center;
+        padding: 2rem;
+        z-index: 10;
+        width: 90%;
+    }
 
+    .mobile-nav::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: -1.2rem;
+        border-top: .6rem solid transparent;
+        border-bottom: .6rem solid hsl(46, 55%, 94%);
+        border-left: .6rem solid transparent;
+        border-right: .6rem solid hsl(46, 55%, 94%);
+    }
+
+    .mobile-nav nav ul li{
+        display: block;
+        list-style: none;
+        margin-bottom: 2rem;
+    }
+
+    .mobile-nav nav ul li:nth-child(4){
+        margin-bottom: 0;
+    }
+
+    .mobile-nav nav ul li:nth-child(4) a{
+        padding: .8rem 1rem;
+        text-transform: uppercase;
+        background: hsl(51, 100%, 49%);
+        border-radius: 3rem;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+
+    .mobile-nav nav ul li a{
+        text-decoration: none;
+        color: hsl(198, 62%, 26%);
+    }
+
+    .features article:nth-child(3) .left-col .left-col-text {
+        position: absolute;
+        bottom: .5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 85%;
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 320px){
+    .hero .header-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .features article .left-col .left-col-text p {
+        font-size: .8rem;
+    }
+
+    .features article:nth-child(3) .left-col .left-col-text {
+        position: absolute;
+        bottom: .5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 85%;
+        max-width: 80%;
+    }
+
+    .testimonials h3 {
+        font-size: .7rem;
+    }
+
+    .testimonials .testimonial-row .testimonial-col p {
+        font-size: .8rem;
+    }
+
+    .testimonials .testimonial-row .testimonial-col .client-name h4 {
+        font-size: .9rem;
+    }
+
+    footer nav ul li a {
+        font-size: .8rem;
+    }
+
+    footer .attribution {
+        font-size: .6rem;
+    }
+
+    footer .attribution a {
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 280px){
+    .hero .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .features article:nth-child(3) .left-col .left-col-text {
+        bottom: -1rem;
+    }
+
+    .testimonials h3 {
+        font-size: .6rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+    }
+
+    footer nav ul li a {
+        font-size: .6rem;
+    }
+
+    footer nav ul {
+        margin: 1.5rem 0 3rem;
+    }
+
+    footer nav a img {
+        width: 7.5rem;
+    }
 }
