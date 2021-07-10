@@ -28,4 +28,12 @@ The users are be able to:
 - Flexbox
 - Mobile-first workflow
 
-![desktop](design/desktop-preview.jpg)
+![desktop](design/desktop-desing.jpg)
+![mobile](design/mobile-desing.jpg)
+![mobile](design/mobile-menu.jpg)
+
+
+## Author
+
+- Website - [Dev.JP](https://jperezguerrero.netlify.app/)
+
