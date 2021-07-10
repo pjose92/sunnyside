@@ -28,7 +28,6 @@ The users are be able to:
 - Flexbox
 - Mobile-first workflow
 
-![desktop](design/desktop-desing.jpg)
 ![mobile](design/mobile-design.jpg)
 ![mobile](design/mobile-menu.jpg)
 
